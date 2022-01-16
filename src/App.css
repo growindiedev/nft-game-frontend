@@ -33,18 +33,7 @@
   background-color: #a200d6;
 }
 
-.cta-button {
-  height: 45px;
-  border: 0;
-  width: auto;
-  padding-left: 40px;
-  padding-right: 40px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: bold;
-  color: white;
-}
+
 
 .connect-wallet-container {
   display: flex;
@@ -69,6 +58,19 @@
   );
   background-size: 200% 200%;
   animation: gradient-animation 4s ease infinite;
+}
+
+.cta-button {
+  height: 45px;
+  border: 0;
+  width: auto;
+  padding-left: 40px;
+  padding-right: 40px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
 }
 
 .mint-button {
