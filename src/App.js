@@ -64,6 +64,17 @@ const App = () => {
       );
     } else if (currentAccount && !characterNFT) {
       return <SelectCharacter setCharacterNFT={setCharacterNFT} />;
+    } else if (currentAccount && characterNFT) {
+      return (
+        <div className="select-character-container">
+          <div className="character-item" key={characterNFT.name}>
+            <div className="name-container">
+              <p>{characterNFT.name}</p>
+            </div>
+            <img src={characterNFT.imageURI} alt={characterNFT.name} />
+          </div>
+        </div>
+      );
     }
   };
 
@@ -114,6 +125,7 @@ const App = () => {
     if (currentAccount) {
       console.log("CurrentAccount:", currentAccount);
       fetchNFTMetadata();
+      checkNetwork();
     }
   }, [currentAccount]);
 
