@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import SelectCharacter from "./Components/SelectCharacter";
+import Arena from "./Components/Arena";
 import twitterLogo from "./assets/twitter-logo.svg";
 import { CONTRACT_ADDRESS, transformCharacterData } from "./constants";
 import myEpicGame from "./utils/MyEpicGame.json";
@@ -66,14 +67,7 @@ const App = () => {
       return <SelectCharacter setCharacterNFT={setCharacterNFT} />;
     } else if (currentAccount && characterNFT) {
       return (
-        <div className="select-character-container">
-          <div className="character-item" key={characterNFT.name}>
-            <div className="name-container">
-              <p>{characterNFT.name}</p>
-            </div>
-            <img src={characterNFT.imageURI} alt={characterNFT.name} />
-          </div>
-        </div>
+        <Arena characterNFT={characterNFT} setCharacterNFT={setCharacterNFT} />
       );
     }
   };
